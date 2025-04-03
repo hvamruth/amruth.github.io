@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- your meta tags, title, and CSS links -->
+</head>
+<body>
+
+<script>
+  // Function to adjust styles based on viewport width
+  function adjustStyles() {
+    const viewportWidth = window.innerWidth;
+    const isMobileOrTablet = viewportWidth <= 768;
+
+    // Modify styles accordingly
+    const contents = document.querySelector('.contents');
+    if (contents) {
+      contents.style.marginRight = isMobileOrTablet ? '10%' : '40%';
+    }
+
+    const featureImg = document.querySelector('.feature-img');
+    if (featureImg) {
+      featureImg.style.right = isMobileOrTablet ? '0' : '700px';
+    }
+
+    // Add more style modifications as needed based on the viewport width
+  }
+
+  // Call the function initially and on window resize
+  window.addEventListener('resize', adjustStyles);
+  adjustStyles();
+</script>
+
+<!-- your HTML code here -->
+
+</body>
+</html>

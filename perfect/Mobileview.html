@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeepHiring</title>
+    <style id="custom-styles"></style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Rest of your HTML content -->
+</div>
+
+<script>
+    // Function to adjust styles based on screen width
+    function adjustStyles() {
+        const screenWidth = window.innerWidth;
+        const styles = `
+            body, html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+
+            /* Your other styles based on screen width go here */
+            @media (max-width: 767px) {
+                body {
+                    font-size: 14px;
+                }
+                /* Other mobile styles */
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+                body {
+                    font-size: 16px;
+                }
+                /* Other tablet styles */
+            }
+
+            /* Rest of your CSS styles */
+            .container {
+                height: 100vh;
+                width: 100%;
+                background-image: url(bgck.jpg);
+                background-position: center;
+                background-size: cover;
+                padding-left: 5%;
+                padding-right: 5%;
+                box-sizing: border-box;
+                position: relative;
+            }
+
+            /* Add your other styles here */
+        `;
+
+        document.getElementById('custom-styles').innerHTML = styles;
+    }
+
+    // Call the adjustStyles function initially and on window resize
+    adjustStyles();
+    window.addEventListener('resize', adjustStyles);
+</script>
+
+</body>
+</html>
